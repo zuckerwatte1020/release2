@@ -122,27 +122,27 @@ $(function() {
             type : 'GET',
             url : url
         }).done(function(date){
-            var tag;
-            const obj = JSON.parse(date);
-            $.each(obj,
-                function(index, val) {
+            // var tag;
+            // const obj = JSON.parse(date);
+            // $.each(obj,
+            //     function(index, val) {
 
-                    var tag = document.createElement('div');
-                    tag.style.width = val.width;
-                    tag.style.height = val.height;
-                    tag.style.backgroundColor = val.backgroundColor;
-                    tag.style.boxShadow = val.boxShadow;
-                    tag.style.position = val.position;
-                    tag.style.padding = val.padding;
-                    tag.id = val.id;
-                    tag.className = val.className;
-                    tag.style.top = val.top;
-                    tag.style.left = val.left;
+            //         var tag = document.createElement('div');
+            //         tag.style.width = val.width;
+            //         tag.style.height = val.height;
+            //         tag.style.backgroundColor = val.backgroundColor;
+            //         tag.style.boxShadow = val.boxShadow;
+            //         tag.style.position = val.position;
+            //         tag.style.padding = val.padding;
+            //         tag.id = val.id;
+            //         tag.className = val.className;
+            //         tag.style.top = val.top;
+            //         tag.style.left = val.left;
 
-                    $('.div1').append(tag);
-                    setJosn(tag);
-                });
-                count = count + obj.length;
+            //         $('.div1').append(tag);
+            //         setJosn(tag);
+            //     });
+            //     count = count + obj.length;
 
         }).fail(function(jqXHR, textStatus, errorThrown){
             console.log(jqXHR.status);
